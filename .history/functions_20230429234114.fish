@@ -20,10 +20,8 @@ function make_git
   git add .
   git commit -m "Initial commit"
   set -l repo_url "git@github.com:$user/$repo_name.git"
-  set -l branch_name "main" # or "master"
-  
   git remote add origin $repo_url
-  git push -u origin $branch_name
+  git push -u origin master
 
   printf "Successfully created and pushed new project '$repo_name' to GitHub!\n"
   printf "Directory: $dir\n"
